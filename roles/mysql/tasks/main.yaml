@@ -9,7 +9,8 @@
        name: 
          - botocore
          - boto3
-       state: present
+       executable: pip3.9
+       
 
   - name: start and enable mysql server
     ansible.builtin.service:
