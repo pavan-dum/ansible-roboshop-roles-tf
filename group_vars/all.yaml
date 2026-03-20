@@ -1,11 +1,16 @@
 ansible_user: ec2-user
 ansible_password: DevOps321
-mongodb_host: mongodb-"{{ env }}".dpavan.online
-catalogue_host: catalogue-"{{ env }}".dpavan.online
-redis_host: redis-"{{ env }}".dpavan.online
-user_host: user-"{{ env }}".dpavan.online
-cart_host: cart-"{{ env }}".dpavan.online
-mysql_host: mysql-"{{ env }}".dpavan.online
-rabbitmq_host: rabbitmq-"{{ env }}".dpavan.online
-shipping_host: shipping-"{{ env }}".dpavan.online
-payment_host: payment-"{{ env }}".dpavan.online
+
+mongodb_host: mongodb-{{ env }}.dpavan.online
+mysql_host: mysql-{{ env }}.dpavan.online
+redis_host: redis-{{ env }}.dpavan.online
+rabbitmq_host: rabbitmq-{{ env }}.dpavan.online
+
+user_host: user.backend-alb-{{ env }}.dpavan.online
+catalogue_host: catalogue.backend-alb-{{ env }}.dpavan.online
+cart_host: cart.backend-alb-{{ env }}.dpavan.online
+shipping_host: shipping.backend-alb-{{ env }}.dpavan.online
+payment_host: payment.backend-alb-{{ env }}.dpavan.online
+
+app_version : v3
+
